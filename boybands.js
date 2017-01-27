@@ -20,20 +20,27 @@ for (var i = 0; i < vegetables.length; i++) {
 	console.log("Current Veggie: ", vegetables[i]);
 }
 // // Get a reference to the appropriate DOM element for bands
-var bandElement = document.getElementById(boy-bands);
+var bandElement = document.getElementById('boy-bands');
 
 // // Get a reference to the appropriate DOM element for vegetables
-// var veggieElement = ???;
+var veggieElement = document.getElementById('vegetables');
 
 // // Start looping
 // for (var loopTracker = 0; loopTracker < loopCount; loopTracker += 1) {
 
 //   // Add the band names into the correct <div>
-//   currentBand = ???;
-
+currentBand = bandElement.innerHTML;
+currentBand += "<ul>";
+for (var i = 0; i < bands.length; i++) {
+				currentBand += "<li>" + bands[i] +"</li>";
+		}
+	}
+}
+currentBand += "</ul>";
+bandElement.innerHTML = currentBand;
 
 //   // Add the veggie names into the correct <div>
-//   currentVeggie = ???;
+//   currentVeggie = '';
 
 // }
 
