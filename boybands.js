@@ -3,7 +3,7 @@ var vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
 
 // The number of loops to perform (what if the array changes?)
 var loopCount = 5;
-for (var i = 0; i < bands.length; i++) {
+for (var i = 1; i <= bands.length; i++) {
 	loopCount = i;
 	console.log("Loop Count ", i);
 }
@@ -32,17 +32,21 @@ var veggieElement = document.getElementById('vegetables');
 currentBand = bandElement.innerHTML;
 currentBand += "<ul>";
 for (var i = 0; i < bands.length; i++) {
-				currentBand += "<li>" + bands[i] +"</li>";
-		}
-	}
+	currentBand += "<li>" + bands[i] +"</li>";
 }
 currentBand += "</ul>";
 bandElement.innerHTML = currentBand;
 
-//   // Add the veggie names into the correct <div>
-//   currentVeggie = '';
+  // Add the veggie names into the correct <div>
+currentVeggie = veggieElement.innerHTML;
+currentVeggie += "<ul>";
+for (var i = 0; i < vegetables.length; i++) {
+	currentVeggie += "<li>" + vegetables[i] +"</li>";
+}
+currentVeggie += "</ul>";
+veggieElement.innerHTML = currentVeggie;
 
-// }
+
 
 // Loop through the two arrays provided (bands and vegetables) and output 
 // each element in the arrays into their corresponding HTML <div> element. 
